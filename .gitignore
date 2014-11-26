@@ -1,0 +1,15 @@
+.classpath
+.project
+/.metadata
+/.settings
+/build
+/bin
+/dist
+/lib
+/WebContent/WEB-INF/lib
+.DS_Store
+/.idea
+*.iml
+/node_modules
+/uke_gulp_modules/node_modules
+.gradle
