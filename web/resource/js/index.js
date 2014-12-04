@@ -8,4 +8,21 @@ $(function() {
 		dots: true,               //  Display dot navigation
 		arrows: true
 	});
+
+	$(window).bind("scroll", function(){
+		var $goToTop = $("#go_to_top");
+		if($(document).scrollTop() > 0){
+			if($goToTop.is(":hidden")){
+				$goToTop.fadeIn("fast");
+			}
+		} else {
+			if($goToTop.is(":visible")){
+				$goToTop.fadeOut("fast");
+			}
+		}
+	});
+
+	$("#go_to_top").click(function(){
+		$("html,body").animate({"scrollTop": 0}, 100);
+	});
 });
