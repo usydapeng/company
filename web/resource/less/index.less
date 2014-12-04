@@ -3,15 +3,17 @@
 .banner {
 	position: relative;
 	width: 100%;
+	text-align: center;
+	overflow: auto;
 
 	ul {
 		list-style: none;
-		width: 400%;
+		width: 300%;
 
 		li {
 			display: block;
 			float: left;
-			width: 25%;
+			width: 33%;
 			min-height: 410px;
 			background-size: 100% 100%;
 		}
@@ -54,5 +56,44 @@
 				opacity: 1;
 			}
 		}
+	}
+
+	.arrows {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		z-index: 10;
+
+		.arrow {
+			width: 41px;
+			height: 100%;
+			text-indent: -9999em;
+		}
+
+		.prev {
+			float: left;
+			background: url("../img/icon-slides.png") -84px center no-repeat;
+
+			&:active, &:hover {
+				background: url("../img/icon-slides.png") 0px center no-repeat;
+			}
+		}
+
+		.next {
+			float: right;
+			background: url("../img/icon-slides.png") -125px center no-repeat;
+
+			&:active, &:hover {
+				background: url("../img/icon-slides.png") -42px center no-repeat;
+			}
+		}
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px), (max-width: 900px) {
+	.banner ul li {
+		height: 240px;
 	}
 }
