@@ -2,6 +2,10 @@
 @import "include/layout";
 @import "include/header";
 
+.container {
+	padding: 0px;
+}
+
 .banner {
 	position: relative;
 	width: 100%;
@@ -98,5 +102,12 @@
 				background: url("@{img_url}/icon-slides.png") -42px center no-repeat;
 			}
 		}
+	}
+}
+
+@media (max-width: 500px) {
+
+	.banner ul li {
+		min-height: 150px;
 	}
 }
